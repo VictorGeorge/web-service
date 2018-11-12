@@ -1,5 +1,6 @@
 package com.vita1.app;
 
+import com.vita1.rest.accommodationRest;
 import com.vita1.rest.flightRest;
 import com.vita1.api.Flight;
 
@@ -15,6 +16,7 @@ public class flightApplication extends Application {
     public flightApplication() {
         // Register our service
         singletons.add(new flightRest());
+        singletons.add(new accommodationRest());
     }
     @Override
     public Set<Object> getSingletons() {
