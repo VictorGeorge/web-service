@@ -38,6 +38,8 @@ public class ServerInterfaceImpl {
 
     public static List<Accommodation> getAccommodations(){return accommodations;}
 
+    public static boolean buyFlight(){return true;}
+
     public void addFlight(String origem,String destino,String data, int vagas, int preço){
         flights.add(new Flight(origem, destino, data, vagas, preço));
     }
