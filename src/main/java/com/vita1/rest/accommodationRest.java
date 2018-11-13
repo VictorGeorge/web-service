@@ -2,6 +2,7 @@ package com.vita1.rest;
 
 import com.google.gson.reflect.TypeToken;
 import com.vita1.api.Accommodation;
+import com.vita1.api.SearchParams;
 import com.vita1.app.ServerInterfaceImpl;
 
 
@@ -20,7 +21,8 @@ public class accommodationRest {
     @Produces(MediaType.APPLICATION_JSON)
     public Response list(@QueryParam("hotel") String hotel,
                          @QueryParam("dataEntrada") String dataEntrada, @QueryParam("dataSaida") String dataSaida,
-                         @QueryParam("numeroQuartos") Long numeroQuartos, @QueryParam("numeroPessoas") Long numeroPessoas) {
+                         @QueryParam("numeroQuartos") int numeroQuartos, @QueryParam("numeroPessoas") int numeroPessoas) {
+        SearchParams searchParams = new SearchParams(hotel, dataEntrada, dataSaida, numeroQuartos, numeroPessoas);
         Type listType = new TypeToken<List<Accommodation>>() {}.getType();
         Gson gson = new Gson();
         String userIdList = gson.toJson(accommodations, listType);
@@ -32,8 +34,9 @@ public class accommodationRest {
     @Produces(MediaType.APPLICATION_JSON)
     public Response buy(@QueryParam("hotel") String hotel,
                         @QueryParam("dataEntrada") String dataEntrada, @QueryParam("dataSaida") String dataSaida,
-                        @QueryParam("numeroQuartos") Long numeroQuartos, @QueryParam("numeroPessoas") Long numeroPessoas) {
-        if(ServerInterfaceImpl.buyFlight()) {
+                        @QueryParam("numeroQuartos") int numeroQuartos, @QueryParam("numeroPessoas") int numeroPessoas) {
+        SearchParams searchParams = new SearchParams(hotel, dataEntrada, dataSaida, numeroQuartos, numeroPessoas);
+        if(ServerInterfaceImpl.buyAccommodation()) {
             return Response.ok().build();
         }
         else
