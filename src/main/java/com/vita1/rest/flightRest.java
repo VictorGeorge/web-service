@@ -7,10 +7,7 @@ import com.vita1.app.ServerInterfaceImpl;
 
 import com.google.gson.Gson;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.lang.reflect.Type;
@@ -21,8 +18,9 @@ public class flightRest {
     List<Flight> flights = ServerInterfaceImpl.getFlights();
     @GET // This annotation indicates GET request
     @Produces(MediaType.APPLICATION_JSON)
-    //TODO receber parametros para busca
-    public Response list() {
+    public Response list(@QueryParam("origem") String origem, @QueryParam("destino") String destino,
+                         @QueryParam("dataIda") String dataIda, @QueryParam("dataVolta") String dataVolta,
+                         @QueryParam("numeroPessoas") Long numeroPessoas) {
         Type listType = new TypeToken<List<Flight>>() {}.getType();
         Gson gson = new Gson();
         String userIdList = gson.toJson(flights, listType);
@@ -32,8 +30,9 @@ public class flightRest {
     @POST
     @Path("/buy")
     @Produces(MediaType.APPLICATION_JSON)
-    //TODO receber parametros para busca
-    public Response buy() {
+    public Response buy(@QueryParam("origem") String origem, @QueryParam("destino") String destino,
+                        @QueryParam("dataIda") String dataIda, @QueryParam("dataVolta") String dataVolta,
+                        @QueryParam("numeroPessoas") Long numeroPessoas) {
         if(ServerInterfaceImpl.buyFlight()) {
             return Response.ok().build();
         }
