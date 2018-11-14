@@ -21,18 +21,16 @@ public class SearchParams{
         this.numeroPessoas = numeroPessoas;
     }
 
-    public SearchParams(String hotel, String dataEntrada, String dataSaida, int numeroQuartos, int numeroPessoas, String origem, String destino, String dataIda, String dataVolta, int preço) {
+    public SearchParams(String hotel, String dataEntrada, String dataSaida, int numeroQuartos, int numeroPessoas, String origem, String destino, String dataIda, String dataVolta) {
         this.hotel = hotel;
         this.dataEntrada = dataEntrada;
         this.dataSaida = dataSaida;
         this.numeroQuartos = numeroQuartos;
         this.numeroPessoas = numeroPessoas;
-        this.idaEVolta = idaEVolta;
         this.origem = origem;
         this.destino = destino;
         this.dataIda = dataIda;
         this.dataVolta = dataVolta;
-        this.preço = preço;
     }
 
     public SearchParams(String origem, String destino, String dataIda, String dataVolta, int numeroPessoas) {

@@ -33,9 +33,9 @@ public class accommodationRest {
     @POST
     @Path("/buy")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response buy(@QueryParam("hotel") String hotel,
-                        @QueryParam("dataEntrada") String dataEntrada, @QueryParam("dataSaida") String dataSaida,
-                        @QueryParam("numeroQuartos") int numeroQuartos, @QueryParam("numeroPessoas") int numeroPessoas) {
+    public Response buy(@FormParam("hotel") String hotel,
+                        @FormParam("dataEntrada") String dataEntrada, @FormParam("dataSaida") String dataSaida,
+                        @FormParam("numeroQuartos") int numeroQuartos, @FormParam("numeroPessoas") int numeroPessoas) {
         SearchParams searchParams = new SearchParams(hotel, dataEntrada, dataSaida, numeroQuartos, numeroPessoas);
         if(ServerInterfaceImpl.buyAccommodation(searchParams)) {
             return Response.ok().build();

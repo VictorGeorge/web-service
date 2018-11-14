@@ -34,9 +34,9 @@ public class flightRest {
     @POST
     @Path("/buy")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response buy(@QueryParam("origem") String origem, @QueryParam("destino") String destino,
-                        @QueryParam("dataIda") String dataIda, @QueryParam("dataVolta") String dataVolta,
-                        @QueryParam("numeroPessoas") int numeroPessoas) {
+    public Response buy(@FormParam("origem") String origem, @FormParam("destino") String destino,
+                        @FormParam("dataIda") String dataIda, @FormParam("dataVolta") String dataVolta,
+                        @FormParam("numeroPessoas") int numeroPessoas) {
         SearchParams searchParams = new SearchParams(origem, destino, dataIda, dataVolta, numeroPessoas);
         if(ServerInterfaceImpl.buyFlight(searchParams)) {
             return Response.ok().build();

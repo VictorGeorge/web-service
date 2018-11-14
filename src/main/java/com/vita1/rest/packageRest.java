@@ -21,8 +21,8 @@ public class packageRest {
     public Response list(@QueryParam("origem") String origem, @QueryParam("destino") String destino,
                          @QueryParam("dataIda") String dataIda, @QueryParam("dataVolta") String dataVolta, @QueryParam("hotel") String hotel,
                          @QueryParam("dataEntrada") String dataEntrada, @QueryParam("dataSaida") String dataSaida,
-                         @QueryParam("numeroQuartos") int numeroQuartos, @QueryParam("numeroPessoas") int numeroPessoas, @QueryParam("preço") int preço) {
-        SearchParams searchParams = new SearchParams(hotel, dataEntrada, dataSaida, numeroQuartos, numeroPessoas, origem, destino, dataIda, dataVolta, preço);
+                         @QueryParam("numeroQuartos") int numeroQuartos, @QueryParam("numeroPessoas") int numeroPessoas) {
+        SearchParams searchParams = new SearchParams(hotel, dataEntrada, dataSaida, numeroQuartos, numeroPessoas, origem, destino, dataIda, dataVolta);
         List<Object> filteredPackages = ServerInterfaceImpl.getPackages(searchParams);
         Type listType = new TypeToken<List<Accommodation>>() {}.getType();
         Gson gson = new Gson();
@@ -33,11 +33,11 @@ public class packageRest {
     @POST
     @Path("/buy")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response buy(@QueryParam("origem") String origem, @QueryParam("destino") String destino,
-                        @QueryParam("dataIda") String dataIda, @QueryParam("dataVolta") String dataVolta, @QueryParam("hotel") String hotel,
-                        @QueryParam("dataEntrada") String dataEntrada, @QueryParam("dataSaida") String dataSaida,
-                        @QueryParam("numeroQuartos") int numeroQuartos, @QueryParam("numeroPessoas") int numeroPessoas, @QueryParam("preço") int preço) {
-        SearchParams searchParams = new SearchParams(hotel, dataEntrada, dataSaida, numeroQuartos, numeroPessoas, origem, destino, dataIda, dataVolta, preço);
+    public Response buy(@FormParam("origem") String origem, @FormParam("destino") String destino,
+                        @FormParam("dataIda") String dataIda, @FormParam("dataVolta") String dataVolta, @FormParam("hotel") String hotel,
+                        @FormParam("dataEntrada") String dataEntrada, @FormParam("dataSaida") String dataSaida,
+                        @FormParam("numeroQuartos") int numeroQuartos, @FormParam("numeroPessoas") int numeroPessoas) {
+        SearchParams searchParams = new SearchParams(hotel, dataEntrada, dataSaida, numeroQuartos, numeroPessoas, origem, destino, dataIda, dataVolta);
         if(ServerInterfaceImpl.buyPackage(searchParams)) {
             return Response.ok().build();
         }
