@@ -2,11 +2,11 @@ package com.vita1.api;
 
 public class Flight {
 
-    private String origem;
-    private String destino;
-    private String data;
-    private int vagas;
-    private int precoUnitario;
+    public String origem;
+    public String destino;
+    public String data;
+    public int vagas;
+    public int precoUnitario;
 
     public Flight(String origem, String destino, String data, int vagas, int precoUnitario) {
         this.origem = origem;

@@ -37,7 +37,8 @@ public class flightRest {
     public Response buy(@QueryParam("origem") String origem, @QueryParam("destino") String destino,
                         @QueryParam("dataIda") String dataIda, @QueryParam("dataVolta") String dataVolta,
                         @QueryParam("numeroPessoas") int numeroPessoas) {
-        if(ServerInterfaceImpl.buyFlight()) {
+        SearchParams searchParams = new SearchParams(origem, destino, dataIda, dataVolta, numeroPessoas);
+        if(ServerInterfaceImpl.buyFlight(searchParams)) {
             return Response.ok().build();
         }
         else

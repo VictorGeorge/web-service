@@ -23,9 +23,10 @@ public class accommodationRest {
                          @QueryParam("dataEntrada") String dataEntrada, @QueryParam("dataSaida") String dataSaida,
                          @QueryParam("numeroQuartos") int numeroQuartos, @QueryParam("numeroPessoas") int numeroPessoas) {
         SearchParams searchParams = new SearchParams(hotel, dataEntrada, dataSaida, numeroQuartos, numeroPessoas);
+        List<Accommodation> filteredAccomodations = ServerInterfaceImpl.getAccommodations(searchParams);
         Type listType = new TypeToken<List<Accommodation>>() {}.getType();
         Gson gson = new Gson();
-        String userIdList = gson.toJson(accommodations, listType);
+        String userIdList = gson.toJson(filteredAccomodations, listType);
         return Response.ok(userIdList).build();
     }
 
@@ -36,7 +37,7 @@ public class accommodationRest {
                         @QueryParam("dataEntrada") String dataEntrada, @QueryParam("dataSaida") String dataSaida,
                         @QueryParam("numeroQuartos") int numeroQuartos, @QueryParam("numeroPessoas") int numeroPessoas) {
         SearchParams searchParams = new SearchParams(hotel, dataEntrada, dataSaida, numeroQuartos, numeroPessoas);
-        if(ServerInterfaceImpl.buyAccommodation()) {
+        if(ServerInterfaceImpl.buyAccommodation(searchParams)) {
             return Response.ok().build();
         }
         else
