@@ -21,7 +21,7 @@ public class SearchParams{
         this.numeroPessoas = numeroPessoas;
     }
 
-    public SearchParams(String hotel, String dataEntrada, String dataSaida, int numeroQuartos, int numeroPessoas, boolean idaEVolta, String origem, String destino, String dataIda, String dataVolta, int preço) {
+    public SearchParams(String hotel, String dataEntrada, String dataSaida, int numeroQuartos, int numeroPessoas, String origem, String destino, String dataIda, String dataVolta, int preço) {
         this.hotel = hotel;
         this.dataEntrada = dataEntrada;
         this.dataSaida = dataSaida;

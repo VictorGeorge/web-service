@@ -1,0 +1,20 @@
+Flights
+	GET:
+		localhost/flight
+		localhost/flight?origem=CWB&destino=GRU&dataIda=10/02/2019&dataVolta=11/02/2019&numeroPessoas=130
+	POST:
+		localhost/flight/buy?origem=CWB&destino=GRU&dataIda=10/02/2019&dataVolta=11/02/2019&numeroPessoas=10
+		
+Accommodation
+	GET:
+		localhost/accommodation
+		localhost/accommodation?hotel=b&dataEntrada=11/02/2019&dataSaida=11/02/2019&numeroQuartos=109&numeroPessoas=409
+	POST:
+		localhost/accommodation/buy?hotel=b&dataEntrada=11/02/2019&dataSaida=11/02/2019&numeroQuartos=1&numeroPessoas=4
+		
+Packages
+	GET:
+		localhost/package
+		localhost/package?hotel=b&dataEntrada=11/02/2019&dataSaida=11/02/2019&numeroQuartos=1&numeroPessoas=4&origem=CWB&destino=GRU&dataIda=10/02/2019&dataVolta=11/02/2019&numeroPessoas=10
+	POST:
+		localhost/package/buy?hotel=b&dataEntrada=11/02/2019&dataSaida=11/02/2019&numeroQuartos=1&numeroPessoas=4&origem=CWB&destino=GRU&dataIda=10/02/2019&dataVolta=11/02/2019

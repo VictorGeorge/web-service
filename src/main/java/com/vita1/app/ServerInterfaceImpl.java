@@ -6,6 +6,7 @@ import com.vita1.api.SearchParams;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -68,11 +69,12 @@ public class ServerInterfaceImpl {
         return departureFlightStream.collect(Collectors.toList());
     }
     /**
-     * método de consulta de tickets
+     * método de consulta de hoteis
      */
     public static List<Accommodation> getAccommodations(){return accommodations;}
     /**
-     * método de consulta de tickets
+     * método de consulta de hoteis
+     *
      * @param searchParams
      */
     public static List<Accommodation> getAccommodations(SearchParams searchParams){
@@ -87,7 +89,7 @@ public class ServerInterfaceImpl {
         return departureAccommodationStream.collect(Collectors.toList());
     }
     /**
-     * método de consulta de tickets
+     * método de compra de tickets
      * @param searchParams
      */
     public static boolean buyFlight(SearchParams searchParams){
@@ -108,6 +110,17 @@ public class ServerInterfaceImpl {
 
             flightToBuy = Stream.concat(departureFlightStream, departureFlightStreamReturn).collect(Collectors.toList()); //returns merge of 2 lists
             if(flightToBuy.size() == 2) {
+                flights.stream().filter(flight ->
+                        (flight.getOrigem().equals(searchParams.origem)) &&
+                                (flight.getDestino().equals(searchParams.destino)) &&
+                                (flight.getData().equals(searchParams.dataIda)) &&
+                                (flight.getVagas() >= searchParams.numeroPessoas)).findFirst().ifPresent(flight -> flight.setVagas(flight.getVagas() - searchParams.numeroPessoas)); //Reduz o numero de vagas da ida
+
+                flights.stream().filter(flight ->
+                        (flight.getOrigem().equals(searchParams.destino)) &&
+                                (flight.getDestino().equals(searchParams.origem)) &&
+                                (flight.getData().equals(searchParams.dataVolta)) &&
+                                (flight.getVagas() >= searchParams.numeroPessoas)).findFirst().ifPresent(flight -> flight.setVagas(flight.getVagas() - searchParams.numeroPessoas)); //Reduz o numero de vagas da volta
                 return true;
             }
         }
@@ -115,7 +128,7 @@ public class ServerInterfaceImpl {
             flightToBuy = departureFlightStream.collect(Collectors.toList());
             if (flightToBuy.size() == 1) {
                 flights.stream().filter(flight ->
-                                (flight.getOrigem().equals(searchParams.origem)) &&
+                        (flight.getOrigem().equals(searchParams.origem)) &&
                                 (flight.getDestino().equals(searchParams.destino)) &&
                                 (flight.getData().equals(searchParams.dataIda)) &&
                                 (flight.getVagas() >= searchParams.numeroPessoas)).findFirst().ifPresent(flight -> flight.setVagas(flight.getVagas() - searchParams.numeroPessoas)); //Reduz esse numero de vagas
@@ -125,27 +138,55 @@ public class ServerInterfaceImpl {
         return false;
     }
     /**
-     * método de consulta de tickets
+     * método de compra de quarto
      * @param searchParams
      */
     public static boolean buyAccommodation(SearchParams searchParams){
         //filter through accomodations
-        Stream<Accommodation> departureAccommodationStream = accommodations.stream().filter(flight ->
-                ((searchParams.hotel == null) || (flight.getHotel().equals(searchParams.hotel))) &&
-                        ((searchParams.dataEntrada == null) || (flight.getDataEntrada().equals(searchParams.dataEntrada))) &&
-                        ((searchParams.dataSaida == null) || (flight.getDataSaida().equals(searchParams.dataSaida))) &&
-                        ((searchParams.numeroQuartos <= 0) || (flight.getNumeroQuartos() >= searchParams.numeroQuartos)) &&
-                        ((searchParams.numeroPessoas <= 0) || (flight.getNumeroPessoas() >= searchParams.numeroPessoas))
+        Stream<Accommodation> departureAccommodationStream = accommodations.stream().filter(accommodation ->
+                ((searchParams.hotel == null) || (accommodation.getHotel().equals(searchParams.hotel))) &&
+                        ((searchParams.dataEntrada == null) || (accommodation.getDataEntrada().equals(searchParams.dataEntrada))) &&
+                        ((searchParams.dataSaida == null) || (accommodation.getDataSaida().equals(searchParams.dataSaida))) &&
+                        ((searchParams.numeroQuartos <= 0) || (accommodation.getNumeroQuartos() >= searchParams.numeroQuartos)) &&
+                        ((searchParams.numeroPessoas <= 0) || (accommodation.getNumeroPessoas() >= searchParams.numeroPessoas))
         );
         if(departureAccommodationStream.collect(Collectors.toList()).size() == 1){
+            Optional<Accommodation> accomm = accommodations.stream().filter(accommodation ->
+                    (accommodation.getHotel().equals(searchParams.hotel)) &&
+                            (accommodation.getDataEntrada().equals(searchParams.dataEntrada)) &&
+                            (accommodation.getDataSaida().equals(searchParams.dataSaida)) &&
+                            (accommodation.getNumeroQuartos() >= searchParams.numeroQuartos)).findFirst(); //Pega o hotel
+            accomm.ifPresent(accommodation -> accommodation.setNumeroPessoas(accommodation.getNumeroPessoas() - searchParams.numeroPessoas));//decrementa o numero de pessoas comprado
+            accomm.ifPresent(accommodation -> accommodation.setNumeroQuartos(accommodation.getNumeroQuartos() - searchParams.numeroQuartos));//decrementa o numero de quartos
             return true;
         }
         else
             return false;
     }
 
+    /**
+     * método de compra de pacotes
+     * @param searchParams
+     */
+    public static boolean buyPackage(SearchParams searchParams){
+        if(buyFlight(searchParams))
+            return buyAccommodation(searchParams);
+        else
+            return false;
+    }
+
+    /**
+     * método de consulta de pacotes
+     * @param searchParams
+     */
+    public static List<Object> getPackages(SearchParams searchParams){
+        List<Object> packages = new ArrayList<>();
+        packages.add(getFlights(searchParams));
+        packages.add(getAccommodations(searchParams));
+        return packages;
+    }
+
     public void addFlight(String origem,String destino,String data, int vagas, int preço){
         flights.add(new Flight(origem, destino, data, vagas, preço));
     }
-
 }
