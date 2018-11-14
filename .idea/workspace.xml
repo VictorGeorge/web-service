@@ -7,25 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c483b011-1c02-4725-aa37-a406d15b1a43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_8_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_client_3_1_4_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_jaxrs_3_1_4_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_jaxrs_services_3_1_4_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_annotation_jboss_annotations_api_1_2_spec_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_ws_rs_jboss_jaxrs_api_2_0_spec_1_0_1_Beta1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/classes/com/vita1/api/Accommodation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/classes/com/vita1/api/Flight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/classes/com/vita1/api/SearchParams.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/classes/com/vita1/app/ServerInterfaceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/classes/com/vita1/app/flightApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/classes/com/vita1/rest/accommodationRest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/classes/com/vita1/rest/accommodationRest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/classes/com/vita1/rest/flightRest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/classes/com/vita1/rest/flightRest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/activation-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/commons-codec-1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/commons-io-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/gson-2.8.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/httpclient-4.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/httpcore-4.4.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/jboss-annotations-api_1.2_spec-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/jboss-jaxrs-api_2.0_spec-1.0.1.Beta1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/jcip-annotations-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/resteasy-client-3.1.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/resteasy-jaxrs-3.1.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/lib/resteasy-jaxrs-services-3.1.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Sistemas Distribuidos-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vita1/api/Accommodation.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vita1/api/Flight.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vita1/api/SearchParams.class" beforeDir="false" />
@@ -129,24 +138,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Git file" value="1" />
+          <entry key="Git file" value="2" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gitignore" value="1" />
+          <entry key="gitignore" value="2" />
+          <entry key="txt" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Git file" value="1" />
+          <entry key="Git file" value="2" />
+          <entry key="PLAIN_TEXT" value="26" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
     </session>
   </component>
   <component name="FileEditorManager">
@@ -159,9 +176,15 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>target</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -215,12 +238,32 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Course" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="web-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542161015260" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542161694840" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../rmi-server" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -369,8 +412,23 @@
       <workItem from="1542061852920" duration="4795000" />
       <workItem from="1542070249663" duration="6744000" />
       <workItem from="1542149571791" duration="5002000" />
-      <workItem from="1542160617642" duration="796000" />
+      <workItem from="1542160617642" duration="1064000" />
     </task>
+    <task id="LOCAL-00001" summary="Removing ignored files">
+      <created>1542161442493</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542161442493</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Removing ignored files">
+      <created>1542161469056</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1542161469056</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -388,12 +446,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28647000" />
+    <option name="totallyTimeSpent" value="28915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2986547" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29828325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -410,9 +468,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3299363" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3299363" />
-      <window_info anchor="bottom" id="Application Servers" order="10" weight="0.3289183" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49928468" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Application Servers" order="10" sideWeight="0.49928468" weight="0.32866243" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3286334" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -465,8 +523,41 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/web-service" />
+    </ignored-roots>
+    <MESSAGE value="Removing ignored files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing ignored files" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -573,10 +664,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5980">
-          <caret line="260" lean-forward="true" selection-start-line="260" selection-end-line="260" />
+        <state relative-caret-position="143">
+          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
         </state>
       </provider>
     </entry>
